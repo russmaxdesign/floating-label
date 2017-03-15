@@ -1,0 +1,207 @@
+// variables
+
+$color-input-text: #000;
+$color-placeholder: #666;
+$color-placeholder-hover: #000;
+$color-placeholder-disabled: #ccc;
+$color-label: #1f7c8a;
+$color-label-focus: #3655b1;
+$color-border: #ddd;
+$color-border-focus: #3655b1;
+$color-disabled-background: #f5f5f5;
+$label-size: 14px;
+
+
+// floating-label
+
+.floating-label {
+  position: relative;
+  margin: 30px 0 40px;
+}
+
+
+// control
+
+.floating-label__control {
+  width: 100%;
+  border: none;
+  border: 1px solid transparent;
+  border-bottom: 1px solid $color-border;
+  padding: .5em;
+  resize: none;
+  color: $color-input-text;
+  background: #fff;
+}
+
+
+// control disabled
+
+.floating-label__control--disabled {
+  cursor: not-allowed;
+}
+
+
+// control when in hover
+
+.floating-label__control:hover {
+  border: 1px solid $color-border;
+}
+
+
+// control when in hover and disabled
+
+.floating-label__control--disabled:hover {
+  border: 1px solid transparent;
+  border-bottom: 1px solid $color-border;
+}
+
+
+// control when in focus
+
+.floating-label__control:focus {
+  border: 1px solid $color-border;
+  border-bottom: 1px solid $color-border-focus !important;
+  outline: none;
+}
+
+
+// control when in focus and valid - filled in
+
+.floating-label__control:valid {
+  border: 1px solid transparent;
+  border-bottom: 1px solid $color-border;
+  padding-left: 0;
+}
+
+
+// label
+
+.floating-label__label {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  opacity: 0;
+  color: $color-label-focus;
+  font-size: $label-size;
+}
+
+
+// label when in focus
+
+.floating-label__control:focus + .floating-label__label {
+  opacity: 1;
+
+  transition: .5s ease;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+
+// label when valid (filled in)
+
+.floating-label__control:valid + .floating-label__label {
+  opacity: 1;
+  color: $color-label;
+
+  transition: .5s ease;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+
+// label when in focus and valid (filled in)
+
+.floating-label__control:focus:valid + .floating-label__label {
+  color: $color-label-focus;
+}
+
+
+// placeholder
+
+::-webkit-input-placeholder {
+  opacity: 1;
+  color: $color-placeholder;
+}
+
+:-moz-placeholder {
+  opacity: 1;
+  color: $color-placeholder;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+  color: $color-placeholder;
+}
+
+:-ms-input-placeholder {
+  opacity: 1;
+  color: $color-placeholder;
+}
+
+
+// placeholder hover
+
+.floating-label__control:hover::-webkit-input-placeholder {
+  color: $color-placeholder-hover;
+}
+
+.floating-label__control:hover:-moz-placeholder {
+  color: $color-placeholder-hover;
+}
+
+.floating-label__control:hover::-moz-placeholder {
+  color: $color-placeholder-hover;
+}
+
+.floating-label__control:hover:-ms-input-placeholder {
+  color: $color-placeholder-hover;
+}
+
+
+// placeholder - become hidden when in focus
+
+.floating-label__control:focus::-webkit-input-placeholder {
+  opacity: 0;
+
+  transition: 1s ease;
+}
+
+.floating-label__control:focus:-moz-placeholder {
+  opacity: 0;
+
+  transition: 1s ease;
+}
+
+.floating-label__control:focus::-moz-placeholder {
+  opacity: 0;
+
+  transition: 1s ease;
+}
+
+.floating-label__control:focus:-ms-input-placeholder {
+  opacity: 0;
+
+  transition: 1s ease;
+}
+
+// placeholder disabled
+
+.floating-label__control--disabled::-webkit-input-placeholder,
+.floating-label__control--disabled:hover::-webkit-input-placeholder {
+  color: $color-placeholder-disabled;
+}
+
+.floating-label__control--disabled:-moz-placeholder,
+.floating-label__control--disabled:hover:-moz-placeholder {
+  color: $color-placeholder-disabled;
+}
+
+.floating-label__control--disabled::-moz-placeholder,
+.floating-label__control--disabled:hover::-moz-placeholder {
+  color: $color-placeholder-disabled;
+}
+
+.floating-label__control--disabled:-ms-input-placeholder,
+.floating-label__control--disabled:hover:-ms-input-placeholder {
+  color: $color-placeholder-disabled;
+}
