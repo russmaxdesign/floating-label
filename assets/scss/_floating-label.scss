@@ -1,13 +1,13 @@
 // variables
 
 $color-input-text: #000;
-$color-placeholder: #666;
+$color-placeholder: #767676;
 $color-placeholder-hover: #000;
 $color-placeholder-disabled: #ccc;
-$color-label: #1f7c8a;
-$color-label-focus: #3655b1;
+$color-label: green;
+$color-label-focus: blue;
 $color-border: #ddd;
-$color-border-focus: #3655b1;
+$color-border-focus: blue;
 $color-disabled-background: #f5f5f5;
 $label-size: 14px;
 
@@ -20,9 +20,9 @@ $label-size: 14px;
 }
 
 
-// control
+// field
 
-.floating-label__control {
+.floating-label__field {
   width: 100%;
   border: none;
   border: 1px solid transparent;
@@ -34,40 +34,40 @@ $label-size: 14px;
 }
 
 
-// control disabled
+// field disabled
 
-.floating-label__control--disabled {
+.floating-label__field--disabled {
   cursor: not-allowed;
 }
 
 
-// control when in hover
+// field when in hover
 
-.floating-label__control:hover {
+.floating-label__field:hover {
   border: 1px solid $color-border;
 }
 
 
-// control when in hover and disabled
+// field when in hover and disabled
 
-.floating-label__control--disabled:hover {
+.floating-label__field--disabled:hover {
   border: 1px solid transparent;
   border-bottom: 1px solid $color-border;
 }
 
 
-// control when in focus
+// field when in focus
 
-.floating-label__control:focus {
+.floating-label__field:focus {
   border: 1px solid $color-border;
   border-bottom: 1px solid $color-border-focus !important;
   outline: none;
 }
 
 
-// control when in focus and valid - filled in
+// field when in focus and valid - filled in
 
-.floating-label__control:valid {
+.floating-label__field:valid {
   border: 1px solid transparent;
   border-bottom: 1px solid $color-border;
   padding-left: 0;
@@ -88,7 +88,7 @@ $label-size: 14px;
 
 // label when in focus
 
-.floating-label__control:focus + .floating-label__label {
+.floating-label__field:focus + .floating-label__label {
   opacity: 1;
 
   transition: .5s ease;
@@ -99,7 +99,7 @@ $label-size: 14px;
 
 // label when valid (filled in)
 
-.floating-label__control:valid + .floating-label__label {
+.floating-label__field:valid + .floating-label__label {
   opacity: 1;
   color: $color-label;
 
@@ -111,7 +111,7 @@ $label-size: 14px;
 
 // label when in focus and valid (filled in)
 
-.floating-label__control:focus:valid + .floating-label__label {
+.floating-label__field:focus:valid + .floating-label__label {
   color: $color-label-focus;
 }
 
@@ -141,44 +141,44 @@ $label-size: 14px;
 
 // placeholder hover
 
-.floating-label__control:hover::-webkit-input-placeholder {
+.floating-label__field:hover::-webkit-input-placeholder {
   color: $color-placeholder-hover;
 }
 
-.floating-label__control:hover:-moz-placeholder {
+.floating-label__field:hover:-moz-placeholder {
   color: $color-placeholder-hover;
 }
 
-.floating-label__control:hover::-moz-placeholder {
+.floating-label__field:hover::-moz-placeholder {
   color: $color-placeholder-hover;
 }
 
-.floating-label__control:hover:-ms-input-placeholder {
+.floating-label__field:hover:-ms-input-placeholder {
   color: $color-placeholder-hover;
 }
 
 
 // placeholder - become hidden when in focus
 
-.floating-label__control:focus::-webkit-input-placeholder {
+.floating-label__field:focus::-webkit-input-placeholder {
   opacity: 0;
 
   transition: 1s ease;
 }
 
-.floating-label__control:focus:-moz-placeholder {
+.floating-label__field:focus:-moz-placeholder {
   opacity: 0;
 
   transition: 1s ease;
 }
 
-.floating-label__control:focus::-moz-placeholder {
+.floating-label__field:focus::-moz-placeholder {
   opacity: 0;
 
   transition: 1s ease;
 }
 
-.floating-label__control:focus:-ms-input-placeholder {
+.floating-label__field:focus:-ms-input-placeholder {
   opacity: 0;
 
   transition: 1s ease;
@@ -186,22 +186,22 @@ $label-size: 14px;
 
 // placeholder disabled
 
-.floating-label__control--disabled::-webkit-input-placeholder,
-.floating-label__control--disabled:hover::-webkit-input-placeholder {
+.floating-label__field--disabled::-webkit-input-placeholder,
+.floating-label__field--disabled:hover::-webkit-input-placeholder {
   color: $color-placeholder-disabled;
 }
 
-.floating-label__control--disabled:-moz-placeholder,
-.floating-label__control--disabled:hover:-moz-placeholder {
+.floating-label__field--disabled:-moz-placeholder,
+.floating-label__field--disabled:hover:-moz-placeholder {
   color: $color-placeholder-disabled;
 }
 
-.floating-label__control--disabled::-moz-placeholder,
-.floating-label__control--disabled:hover::-moz-placeholder {
+.floating-label__field--disabled::-moz-placeholder,
+.floating-label__field--disabled:hover::-moz-placeholder {
   color: $color-placeholder-disabled;
 }
 
-.floating-label__control--disabled:-ms-input-placeholder,
-.floating-label__control--disabled:hover:-ms-input-placeholder {
+.floating-label__field--disabled:-ms-input-placeholder,
+.floating-label__field--disabled:hover:-ms-input-placeholder {
   color: $color-placeholder-disabled;
 }
