@@ -15,31 +15,31 @@
     <h2>Outcomes:</h2>
     <h3>Static state</h3>
     <ul>
-      <li>Before any user interaction with a form control, the placeholder should be visible and the label should be hidden</li>
+      <li>Before any user interaction with a form field, the placeholder should be visible and the label should be hidden</li>
       <li>The placeholder should be of sufficient color contrast.</li>
     </ul>
     <h3>Hover state</h3>
     <ul>
-      <li>If a user hovers over the form control, the placeholder and form control should change in appearance to indicate that the form control is interactive.</li>
-      <li>Ideally, the form control could change in hover state so that the border appears on all sides of the element - to help make it more discoverable.</li>
+      <li>If a user hovers over the form field, the placeholder and form field should change in appearance to indicate that the form field is interactive.</li>
+      <li>Ideally, the form field could change in hover state so that the border appears on all sides of the element - to help make it more discoverable.</li>
     </ul>
     <h3>Focus state</h3>
     <ul>
-      <li>If a user focuses on the form control (via mouse click or by tabbing to the element):
+      <li>If a user focuses on the form field (via mouse click or by tabbing to the element):
         <ul>
           <li>The placeholder should gradually fade to invisible.</li>
-          <li>The label should animate into view above the form control.</li>
+          <li>The label should animate into view above the form field.</li>
           <li>The border that appeared when the element was in hover state should remain visible when in focus state.</li>
-          <li>Additionally, the form control's bottom border should change in color - to help indicate that is is now in "edit mode".</li>
+          <li>Additionally, the form field's bottom border should change in color - to help indicate that is is now in "edit mode".</li>
         </ul>
       </li>
     </ul>
     <h3>De-focus state</h3>
     <ul>
-      <li>When focus leaves the form control:
+      <li>When focus leaves the form field:
         <ul>
           <li>The label should remain in view but change color to indicate that it is no longer in “edit mode” and has been completed.</li>
-          <li>The form control’s border-bottom color should return to the original border-bottom color.</li>
+          <li>The form field’s border-bottom color should return to the original border-bottom color.</li>
         </ul>
       </li>
     </ul>
@@ -58,25 +58,25 @@
     <form action="#">
       <div class="floating-label">
           <label for="text1">
-            <input class="floating-label__control" type="text" placeholder="Add your first name" id="text1" required>
+            <input class="floating-label__field" type="text" placeholder="Add your first name" id="text1" required>
             <span class="floating-label__label">First Name</span>
           </label>
       </div>
       <div class="floating-label">
           <label for="text2">
-            <input class="floating-label__control" type="text" placeholder="Add your last name" id="text2" required>
+            <input class="floating-label__field" type="text" placeholder="Add your last name" id="text2" required>
             <span class="floating-label__label">Last Name</span>
           </label>
       </div>
       <div class="floating-label">
           <label for="text2">
-            <input class="floating-label__control floating-label__control--disabled" type="text" placeholder="This input is disabled" id="text2" disabled>
+            <input class="floating-label__field floating-label__field--disabled" type="text" placeholder="This input is disabled" id="text2" disabled>
             <span class="floating-label__label">Disabled Input</span>
           </label>
       </div>
       <div class="floating-label">
            <label for="text3">
-            <textarea class="floating-label__control" id="text3" cols="30" rows="4" placeholder="Add a comment" required></textarea>
+            <textarea class="floating-label__field" id="text3" cols="30" rows="4" placeholder="Add a comment" required></textarea>
             <span class="floating-label__label">Comment</span>
           </label>
       </div>
@@ -86,7 +86,7 @@
     <figure>
       <figcaption class="markup-heading">Markup</figcaption>
 <pre><code class="language-html">&lt;div class="floating-label"&gt;
-  &lt;input class="floating-label__control" type="text" placeholder="First Name" id="text1" required&gt;
+  &lt;input class="floating-label__field" type="text" placeholder="First Name" id="text1" required&gt;
   &lt;label class="floating-label__label" for="text1"&gt;First Name&lt;/label&gt;
 &lt;/div&gt;</code></pre>
     </figure>
